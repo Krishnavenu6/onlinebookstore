@@ -1,0 +1,15 @@
+create database library;
+create table register(Rid int,name varchar(20),regno varchar(20),dept varchar(10),pass varchar(10),acctype varchar(5));
+select * from register;
+drop table register;
+create table bookdata(bid int unique,title varchar(20),author varchar(20),genre varchar(10),pub varchar(10),qty int,about varchar(50));
+insert into  bookdata values(4,"Ramayana","valmiki","mythology","ombook",20,"It is about rama and seetha");
+insert into  bookdata values(5,"mahabharat","vaysa","mythology","ombook",30,"It is about pandavas and kovaravas");
+select * from bookdata;
+drop table bookdata;
+create table borrow(student_name varchar(20),book_id int,quantity_borrowed int,borrow_date Date,due_date Date);
+select * from borrow;
+drop table borrow;
+create table orders(order_id int unique,user_name varchar(20),book_id int,quantity int,stat varchar(20));
+select * from orders;
+drop table orders;
